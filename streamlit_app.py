@@ -4,6 +4,7 @@ import folium
 from folium.plugins import MarkerCluster
 import pandas as pd
 
+from streamlit_folium import st_folium
 
 st.title("진주시 CCTV 현황")
 
@@ -24,4 +25,4 @@ for idx, row in df.iterrows():
         icon=folium.Icon(color="blue", icon="info-sign"),
     ).add_to(marker_cluster)
 
-folium_static(m)
+st_data = st_folium(m, width=725)
