@@ -1,3 +1,4 @@
 streamlit
 pands
 streamlit-folium
+folium
